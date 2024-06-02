@@ -31,7 +31,7 @@ echo "mtvsvelte:$1";
 echo "mtvsvelte$count";
 echo "mtvsvelte$minusone";
 
-if [ "$minusone" == "0" ]; then
+if [ $minusone == 0 ]; then
     git pull https://github.com/cjsmocjsmo/mtv-svelte2.0.git;
 
     npm install;
