@@ -26,7 +26,7 @@ echo "mtvsvelte:$1";
 echo "mtvsvelte$count";
 echo "mtvsvelte$minusone";
 
-if [ "$minusone" = "0" ]; then
+if [ "$minusone" -eq 0 ]; then
     
     npm install;
 
@@ -39,7 +39,7 @@ if [ "$minusone" = "0" ]; then
     exit 0;
 fi
 
-if [ "$minusone" = "1" ]; then
+if [ "$minusone" -eq 1 ]; then
     # Build the Docker image
 
     docker stop mtvsvelte1;
@@ -58,7 +58,7 @@ if [ "$minusone" = "1" ]; then
 fi
 
 
-if [ "$minusone" > "1" ]; then
+if [ "$minusone" -gt 1 ]; then
     # Build the Docker image
 
     docker stop mtvsvelte$minusone;
