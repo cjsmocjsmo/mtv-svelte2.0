@@ -26,14 +26,16 @@ count=$(echo "$1" | sed 's/\.//g' )
 echo "mtvsvelte:$1";
 echo "mtvsvelte$count";
 
-# Build the Docker image
+# echo $count -1;
 
-git pull https://github.com/cjsmocjsmo/mtv-svelte2.0.git;
+# # Build the Docker image
 
-npm install;
+# git pull https://github.com/cjsmocjsmo/mtv-svelte2.0.git;
 
-npm run build;
+# npm install;
 
-docker build -t mtvsvelte:$1 .;
+# npm run build;
 
-docker run --name mtvsvelte$count -d -p 8090:8090 mtvsvelte:$1;
+# docker build -t mtvsvelte:$1 .;
+
+# docker run --name mtvsvelte$count -d -p 8090:8090 mtvsvelte:$1;
