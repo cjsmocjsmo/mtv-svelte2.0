@@ -1,10 +1,10 @@
 <script>
+	import { onMount } from 'svelte';
 	import BackArrow from '$lib/components/BackArrow.svelte';
 	import MovList from '$lib/components/MovList.svelte';
 	import PlayerControls from '$lib/components/PlayerControls.svelte';
-	import { onMount } from 'svelte';
+	
 	let data = [];
-
 	onMount(async () => {
 		const addr = 'http://192.168.0.99:8080/starwars';
 		const res = await fetch(addr);

@@ -3,10 +3,10 @@
 	import BackArrow from '$lib/components/BackArrow.svelte';
 	import MovList from '$lib/components/MovList.svelte';
 	import PlayerControls from '$lib/components/PlayerControls.svelte';
-	
+
 	let data = [];
 	onMount(async () => {
-		const addr = 'http://192.168.0.99:8080/xmen';
+		const addr = 'http://192.168.0.97:8080/drama';
 		const res = await fetch(addr);
 		data = await res.json();
 		data = data;
@@ -15,7 +15,7 @@
 
 <main>
 	<BackArrow path="/" />
-	<h1>XMen</h1>
+	<h1>Drama</h1>
 	<PlayerControls />
 	<MovList {data} />
 	<PlayerControls />
