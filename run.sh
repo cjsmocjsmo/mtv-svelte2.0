@@ -24,12 +24,12 @@ fi
 
 count1=$(echo "$1" | sed 's/\.//g' )
 count=$((count1+1-1))
-minusone="mtvsvelte"$((count-1))
+minusone=$((count-1))
 
 echo "Version: $1";
 echo "mtvsvelte:$1";
 echo "mtvsvelte$count";
-echo "$minusone";
+echo "mtvsvelte$minusone";
 
 if [ "$minusone" == "0" ]; then
     git pull https://github.com/cjsmocjsmo/mtv-svelte2.0.git;
