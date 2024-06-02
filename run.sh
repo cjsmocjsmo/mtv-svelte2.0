@@ -21,24 +21,61 @@ if ! echo "$1" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$'; then
 fi
 
 # If all checks pass, print the arguments
-echo "Version: $1";
+
 count1=$(echo "$1" | sed 's/\.//g' )
 count=$((count1+1-1))
+minusone="mtvsvelte"$((count-1))
+
+echo "Version: $1";
 echo "mtvsvelte:$1";
 echo "mtvsvelte$count";
+echo "mtvsvelte$minusone";
 
-minusone="minusone"$((count-1))
+if [ $minusone == 0 ]; then
+    git pull https://github.com/cjsmocjsmo/mtv-svelte2.0.git;
 
-echo $minusone;
+    npm install;
 
-# # Build the Docker image
+    npm run build;
 
-# git pull https://github.com/cjsmocjsmo/mtv-svelte2.0.git;
+    docker build -t mtvsvelte:$1 .;
 
-# npm install;
+    docker run --name mtvsvelte$count -d -p 8090:8090 mtvsvelte:$1;
+fi
 
-# npm run build;
+if [ $minusone == 1 ]
+    # Build the Docker image
 
-# docker build -t mtvsvelte:$1 .;
+    docker stop mtvsvelte1;
 
-# docker run --name mtvsvelte$count -d -p 8090:8090 mtvsvelte:$1;
+    docker rm mtvsvelte1;
+
+    git pull https://github.com/cjsmocjsmo/mtv-svelte2.0.git;
+
+    npm install;
+
+    npm run build;
+
+    docker build -t mtvsvelte:$1 .;
+
+    docker run --name mtvsvelte$count -d -p 8090:8090 mtvsvelte:$1;
+fi
+
+
+if [ $minusone > 1 ]
+    # Build the Docker image
+
+    docker stop mtvsvelte$minusone;
+
+    docker rm mtvsvelte$minusone;
+
+    git pull https://github.com/cjsmocjsmo/mtv-svelte2.0.git;
+
+    npm install;
+
+    npm run build;
+
+    docker build -t mtvsvelte:$1 .;
+
+    docker run --name mtvsvelte$count -d -p 8090:8090 mtvsvelte:$1;
+fi
