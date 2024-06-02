@@ -13,6 +13,8 @@ if ! echo "$1" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$'; then
     exit 1;
 fi
 
+git pull https://github.com/cjsmocjsmo/mtv-svelte2.0.git;
+
 # If all checks pass, print the arguments
 
 count1=$(echo "$1" | sed 's/\.//g' )
@@ -25,8 +27,7 @@ echo "mtvsvelte$count";
 echo "mtvsvelte$minusone";
 
 if [ "$minusone" = "0" ]; then
-    git pull https://github.com/cjsmocjsmo/mtv-svelte2.0.git;
-
+    
     npm install;
 
     npm run build;
@@ -44,8 +45,6 @@ if [ "$minusone" = "1" ]; then
     docker stop mtvsvelte1;
 
     docker rm mtvsvelte1;
-
-    git pull https://github.com/cjsmocjsmo/mtv-svelte2.0.git;
 
     npm install;
 
@@ -65,8 +64,6 @@ if [ "$minusone" > "1" ]; then
     docker stop mtvsvelte$minusone;
 
     docker rm mtvsvelte$minusone;
-
-    git pull https://github.com/cjsmocjsmo/mtv-svelte2.0.git;
 
     npm install;
 
