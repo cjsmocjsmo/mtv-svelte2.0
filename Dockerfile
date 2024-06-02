@@ -5,8 +5,8 @@ RUN \
     mkdir /usr/share/nginx/html/_app/immutable && \
     mkdir /usr/share/nginx/html/_app/immutable/assets && \
     mkdir /usr/share/nginx/html/_app/immutable/chunks && \
-    mkdir  /usr/share/nginx/html/_app/immutable/entry && \
-    mkdir  /usr/share/nginx/html/_app/immutable/nodes && \
+    mkdir /usr/share/nginx/html/_app/immutable/entry && \
+    mkdir /usr/share/nginx/html/_app/immutable/nodes && \
     mkdir /usr/share/nginx/html/Movies
 
 COPY \
