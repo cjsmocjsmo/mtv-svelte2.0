@@ -27,4 +27,4 @@ COPY build/_app/immutable/nodes/*.js /usr/share/nginx/html/_app/immutable/nodes/
 RUN mkdir /usr/share/nginx/html/Movies
 COPY build/Movies/*.html /usr/share/nginx/html/Movies/
 
-EXPOSE 9090
+EXPOSE 8090
