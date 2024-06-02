@@ -39,8 +39,8 @@ if [ $minusone == 0 ]; then
     npm run build;
 
     docker build -t mtvsvelte:$1 .;
-
-    docker run --name mtvsvelte$count -d -p 8090:8090 mtvsvelte:$1;
+    
+    docker run --name mtvsvelte1 -d -p 8090:8090 mtvsvelte:$1;
 fi
 
 if [ $minusone == 1 ]
