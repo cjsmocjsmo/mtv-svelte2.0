@@ -26,7 +26,9 @@ count=$(echo "$1" | sed 's/\.//g' )
 echo "mtvsvelte:$1";
 echo "mtvsvelte$count";
 
-echo ( $count - 1 );
+minusone=$((count-1))
+
+echo $minusone;
 
 # # Build the Docker image
 
