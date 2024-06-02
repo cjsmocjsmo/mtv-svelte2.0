@@ -6,13 +6,6 @@ if [ "$#" -ne 1 ]; then
     exit 1;
 fi
 
-# # Check if the first argument is either 32 or 64
-# # If not, print an error message and exit the script
-# if [ "$1" != "32" ] && [ "$1" != "64" ]; then
-#     echo "The first argument must be either 32 or 64"
-#     exit 1
-# fi
-
 # Check if the second argument is a valid version string
 # If not, print an error message and exit the script
 if ! echo "$1" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$'; then
@@ -31,7 +24,7 @@ echo "mtvsvelte:$1";
 echo "mtvsvelte$count";
 echo "mtvsvelte$minusone";
 
-if [ $minusone == "0" ]; then
+if [ "$minusone" == "0" ]; then
     git pull https://github.com/cjsmocjsmo/mtv-svelte2.0.git;
 
     npm install;
@@ -43,7 +36,7 @@ if [ $minusone == "0" ]; then
     docker run --name mtvsvelte1 -d -p 8090:8090 mtvsvelte:$1;
 fi
 
-if [ $minusone == "1" ]; then
+if [ "$minusone" == "1" ]; then
     # Build the Docker image
 
     docker stop mtvsvelte1;
@@ -62,7 +55,7 @@ if [ $minusone == "1" ]; then
 fi
 
 
-if [ $minusone > "1" ]; then
+if [ "$minusone" > "1" ]; then
     # Build the Docker image
 
     docker stop mtvsvelte$minusone;
