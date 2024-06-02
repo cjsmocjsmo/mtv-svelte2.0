@@ -34,6 +34,8 @@ if [ "$minusone" = "0" ]; then
     docker build -t mtvsvelte:$1 .;
     
     docker run --name mtvsvelte1 -d -p 8090:8090 mtvsvelte:$1;
+
+    exit 0;
 fi
 
 if [ "$minusone" = "1" ]; then
@@ -52,6 +54,8 @@ if [ "$minusone" = "1" ]; then
     docker build -t mtvsvelte:$1 .;
 
     docker run --name mtvsvelte$count -d -p 8090:8090 mtvsvelte:$1;
+
+    exit 0;
 fi
 
 
@@ -71,4 +75,6 @@ if [ "$minusone" > "1" ]; then
     docker build -t mtvsvelte:$1 .;
 
     docker run --name mtvsvelte$count -d -p 8090:8090 mtvsvelte:$1;
+
+    exit 0;
 fi
