@@ -22,18 +22,20 @@ fi
 
 # If all checks pass, print the arguments
 echo "Version: $1";
+echo $1;
+echo "$1";
 count=$(echo "$1" | sed 's/\.//g' )
 echo "mtvsvelte:$1";
 echo "mtvsvelte$count";
 
 # Build the Docker image
 
-git pull https://github.com/cjsmocjsmo/mtv-svelte2.0.git;
+# git pull https://github.com/cjsmocjsmo/mtv-svelte2.0.git;
 
-npm install;
+# npm install;
 
-npm run build;
+# npm run build;
 
-docker build -t mtvsvelte:$1 .;
+# docker build -t mtvsvelte:$1 .;
 
-docker run --name mtvsvelte$count -d -p 9090:9090 mtvsvelte:$1;
+# docker run --name mtvsvelte$count -d -p 9090:9090 mtvsvelte:$1;
