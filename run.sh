@@ -22,7 +22,8 @@ fi
 
 # If all checks pass, print the arguments
 echo "Version: $1";
-count=$(echo "$1" | sed 's/\.//g' )
+count1=$(echo "$1" | sed 's/\.//g' )
+count=$((count1+1-1))
 echo "mtvsvelte:$1";
 echo "mtvsvelte$count";
 
