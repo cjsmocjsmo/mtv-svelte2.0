@@ -27,7 +27,7 @@ count=$((count1+1-1))
 echo "mtvsvelte:$1";
 echo "mtvsvelte$count";
 
-minusone=$((count-1))
+minusone="minusone"$((count-1))
 
 echo $minusone;
 
