@@ -4,7 +4,7 @@
 </script>
 
 <div class="movlist">
-	{#each data as mov}
+	{#each data.movlist as mov}
 		<div class="movlist">
 			<MovPlayButton path={mov.path} src={mov.httpthumbpath} alt={mov.name} />
 		</div>

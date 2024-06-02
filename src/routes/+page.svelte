@@ -11,7 +11,7 @@
 <main>
 	<h1>MTV</h1>
 	<div class="iconDiv">
-		<!-- <div class="movicon">
+		<div class="movicon">
 			<a href="/TVShows/tvshows"
 				><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
 					<path
@@ -19,7 +19,7 @@
 					/>
 				</svg></a
 			>
-		</div> -->
+		</div>
 		<div class="movicon">
 			<a href="/admin">
 				<svg
