@@ -43,7 +43,7 @@ if [ $minusone == 0 ]; then
     docker run --name mtvsvelte1 -d -p 8090:8090 mtvsvelte:$1;
 fi
 
-if [ $minusone == 1 ]
+if [ $minusone == 1 ]; then
     # Build the Docker image
 
     docker stop mtvsvelte1;
@@ -62,7 +62,7 @@ if [ $minusone == 1 ]
 fi
 
 
-if [ $minusone > 1 ]
+if [ $minusone > 1 ]; then
     # Build the Docker image
 
     docker stop mtvsvelte$minusone;
