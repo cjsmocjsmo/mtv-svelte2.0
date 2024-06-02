@@ -1,22 +1,52 @@
 <script>
+	import { onMount } from 'svelte';
 	import BackArrow from '$lib/components/BackArrow.svelte';
-	export let data;
-	let mtvdb = data.setup_check;
-	let stats = data.stats_result;
 
-	let run_setup = async () => {
-		const addr = 'http://192.168.0.97:8080/setup/now';
-		const res = await fetch(addr);
-		const setupstatus = await res.json();
-		if (setupstatus === true) {
-			const addr2 = 'http://192.168.0.97:8080/stats';
-			const res2 = await fetch(addr2);
-			stats = await res2.json();
-		}
-	};
 
-	let Bytes = stats[0].size / 1000000000;
-	let To_GB = Bytes.toFixed(2).toString() + 'GB';
+	// onMount(async () => {
+	// 	const addr = 'http://192.168.0.97:8080/setupcheck/now';
+	// 	const res = await fetch(addr);
+	// 	const setup_check = await res.json();
+
+
+
+	// 	let stats_result = null;
+	// 	if (setup_check === true) {
+	// 		const addr2 = 'http://192.168.0.97:8080/stats';
+	// 		const res2 = await fetch(addr2);
+	// 		const stats = await res2.json();
+	// 		stats_result = stats;
+	// 	} else {
+	// 		stats_result = [{
+	// 			moviecount: '0',
+	// 			tvshowcount: '0',
+	// 			postercount: '0',
+	// 			size: '0'
+	// 		}];
+
+	// 	}
+// console.log(setup_check, stats_result);
+
+// return { setup_check, stats_result }
+// }
+
+	// export let data;
+	// let mtvdb = data.setup_check;
+	// let stats = data.stats_result;
+
+	// let run_setup = async () => {
+	// 	const addr = 'http://192.168.0.97:8080/setup/now';
+	// 	const res = await fetch(addr);
+	// 	const setupstatus = await res.json();
+	// 	if (setupstatus === true) {
+	// 		const addr2 = 'http://192.168.0.97:8080/stats';
+	// 		const res2 = await fetch(addr2);
+	// 		stats = await res2.json();
+	// 	}
+	// };
+
+	// let Bytes = stats[0].size / 1000000000;
+	// let To_GB = Bytes.toFixed(2).toString() + 'GB';
 </script>
 
 <main>
@@ -24,7 +54,7 @@
 	<div>
 		<h1>Admin Page</h1>
 	</div>
-	{#if mtvdb}
+	<!-- {#if mtvdb}
 		<div class="boo">
 			<div class="card">
 				<div>
@@ -97,7 +127,7 @@
 				</div>
 			</div>
 		</div>
-	{/if}
+	{/if} -->
 </main>
 
 <style>
@@ -108,7 +138,7 @@
 		align-items: center;
 		flex: 0.6;
 	}
-	.boo {
+	/* .boo {
 		width: 50%;
 		border-style: solid;
 		border-width: 3px;
@@ -123,11 +153,11 @@
 		border-color: red;
 		border-radius: 0.75em;
 		background-color: rgb(163, 104, 218);
-	}
+	} */
 	h1 {
 		color: yellowgreen;
 	}
-	.btnList {
+	/* .btnList {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -175,5 +205,5 @@
 	}
 	.pKey {
 		color: white;
-	}
+	} */
 </style>
