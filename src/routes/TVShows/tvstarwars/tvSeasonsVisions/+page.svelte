@@ -25,7 +25,7 @@
 	<div>
 		<h1>Season 1</h1>
 		<div class="seaList">
-			{#each ddata as d}
+			{#each data1 as d}
 				<SeasonButton info={d} />
 			{/each}
 		</div>
@@ -33,7 +33,7 @@
 	<div>
 		<h1>Season 2</h1>
 		<div class="seaList">
-			{#each ddata2 as d2}
+			{#each data2 as d2}
 				<SeasonButton info={d2} />
 			{/each}
 		</div>
