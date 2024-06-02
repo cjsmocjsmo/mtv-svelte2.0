@@ -36,4 +36,4 @@ npm run build;
 
 docker build -t mtvsvelte:$1 .;
 
-docker run --name mtvsvelte$count -d -p 9090:8090 mtvsvelte:$1;
+docker run --name mtvsvelte$count -d -p 8090:9090 mtvsvelte:$1;
