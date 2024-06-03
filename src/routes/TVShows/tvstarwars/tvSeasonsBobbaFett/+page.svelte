@@ -21,7 +21,7 @@
 	<div>
 		<h1>Season 1</h1>
 		<div class="seaList">
-			{#each data.boba as d}
+			{#each data as d}
 				<SeasonButton info={d} />
 			{/each}
 		</div>
