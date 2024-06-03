@@ -22,7 +22,7 @@
 		const res3 = await fetch(addr3);
 		data3 = await res3.json();
 
-		let addr4 = 'http://192.168.0.97:8080/startrek/lowerdecks/04';
+		let addr4 = 'http://192.168.0.99:8080/startrek/lowerdecks/04';
 		const res4 = await fetch(addr4);
 		data4 = await res4.json();
 	});

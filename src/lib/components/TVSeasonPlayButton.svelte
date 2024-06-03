@@ -2,7 +2,7 @@
 	export const prerender = false;
 	export let info;
 	let playmovie = () => {
-		const ad = 'http://192.168.0.97:8181/OmxplayerPlayMediaReact?medPath=';
+		const ad = 'http://192.168.0.99:8181/OmxplayerPlayMediaReact?medPath=';
 		let ad2 = ad + info.path;
 		let resp = fetch(ad2);
 	}

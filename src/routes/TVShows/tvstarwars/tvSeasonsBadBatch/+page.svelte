@@ -9,15 +9,15 @@
 	let zoo2 = [];
 
 	onMount(async () => {
-		let addr1 = 'http://192.168.0.97:8080/starwars/badbatch/01';
+		let addr1 = 'http://192.168.0.99:8080/starwars/badbatch/01';
 		const res = await fetch(addr1);
 		zoo = await res.json();
 
-		let addr2 = 'http://192.168.0.97:8080/starwars/badbatch/02';
+		let addr2 = 'http://192.168.0.99:8080/starwars/badbatch/02';
 		const res2 = await fetch(addr2);
 		zoo1 = await res2.json();
 
-		let addr3 = 'http://192.168.0.97:8080/starwars/badbatch/03';
+		let addr3 = 'http://192.168.0.99:8080/starwars/badbatch/03';
 		const res3 = await fetch(addr3);
 		zoo2 = await res3.json();
 	});

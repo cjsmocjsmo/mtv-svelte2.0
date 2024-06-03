@@ -8,11 +8,11 @@
 	let data2 = [];
 
 	onMount(async () => {
-		let addr1 = 'http://192.168.0.97:8080/iamgroot/01';
+		let addr1 = 'http://192.168.0.99:8080/iamgroot/01';
 		const res1 = await fetch(addr1);
 		data1 = await res1.json();
 
-		let addr2 = 'http://192.168.0.97:8080/iamgroot/02';
+		let addr2 = 'http://192.168.0.99:8080/iamgroot/02';
 		const res2 = await fetch(addr2);
 		data2 = await res2.json();
 	});

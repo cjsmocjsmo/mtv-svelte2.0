@@ -23,11 +23,11 @@
 		const res3 = await fetch(addr3);
 		data3 = await res3.json();
 
-		let addr4 = 'http://192.168.0.97:8080/startrek/discovery/04';
+		let addr4 = 'http://192.168.0.99:8080/startrek/discovery/04';
 		const res4 = await fetch(addr4);
 		data4 = await res4.json();
 
-		let addr5 = 'http://192.168.0.97:8080/startrek/discovery/05';
+		let addr5 = 'http://192.168.0.99:8080/startrek/discovery/05';
 		const res5 = await fetch(addr5);
 		data5 = await res5.json();
 	});

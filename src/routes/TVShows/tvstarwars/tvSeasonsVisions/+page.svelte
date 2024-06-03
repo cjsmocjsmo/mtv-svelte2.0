@@ -7,11 +7,11 @@
 	let data2 = [];
 
 	onMount(async () => {
-		let addr = 'http://192.168.0.97:8080/starwars/visions/01';
+		let addr = 'http://192.168.0.99:8080/starwars/visions/01';
 		const res = await fetch(addr);
 		data = await res.json();
 
-		let addr2 = 'http://192.168.0.97:8080/starwars/visions/02';
+		let addr2 = 'http://192.168.0.99:8080/starwars/visions/02';
 		const res2 = await fetch(addr2);
 		data2 = await res2.json();
 	});

@@ -8,11 +8,11 @@
 	let data2 = [];
 
 	onMount(async () => {
-		let s1addr = 'http://192.168.0.97:8080/fantasy/wheeloftime/01';
+		let s1addr = 'http://192.168.0.99:8080/fantasy/wheeloftime/01';
 		const res = await fetch(s1addr);
 		data1 = await res.json();
 
-		let s2addr = 'http://192.168.0.97:8080/fantasy/wheeloftime/02';
+		let s2addr = 'http://192.168.0.99:8080/fantasy/wheeloftime/02';
 		const res2 = await fetch(s2addr);
 		data2 = await res2.json();
 	});

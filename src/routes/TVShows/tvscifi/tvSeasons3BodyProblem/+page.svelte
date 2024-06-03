@@ -7,7 +7,7 @@
 	let data = [];
 
 	onMount(async () => {
-		let addr = 'http://192.168.0.97:8080/3bodyproblem/01';
+		let addr = 'http://192.168.0.99:8080/3bodyproblem/01';
 		const res = await fetch(addr);
 		data = await res.json();
 	});

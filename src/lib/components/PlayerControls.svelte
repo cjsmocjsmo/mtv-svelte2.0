@@ -1,12 +1,12 @@
 <script>
 	function next() {
-		let resp = fetch('http://192.168.0.97:8181/Next');
+		let resp = fetch('http://192.168.0.99:8181/Next');
 	};
 	function stop() {
-		let resp = fetch('http://192.168.0.97:8181/Stop');
+		let resp = fetch('http://192.168.0.99:8181/Stop');
 	};
 	function prev() {
-		let prev = fetch('http://192.168.0.97:8181/Previous');
+		let prev = fetch('http://192.168.0.99:8181/Previous');
 	};
 </script>
 

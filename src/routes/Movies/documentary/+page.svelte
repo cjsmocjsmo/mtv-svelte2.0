@@ -6,7 +6,7 @@
 
 	let data = [];
 	onMount(async () => {
-		const addr = 'http://192.168.0.97:8080/documentary';
+		const addr = 'http://192.168.0.99:8080/documentary';
 		const res = await fetch(addr);
 		data = await res.json();
 		data = data;

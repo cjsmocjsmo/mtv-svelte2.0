@@ -9,15 +9,15 @@
 	let data3 = [];
 
 	onMount(async () => {
-		let addr = 'http://192.168.0.97:8080/startrek/sttv/01';
+		let addr = 'http://192.168.0.99:8080/startrek/sttv/01';
 		const res = await fetch(addr);
 		data1 = await res.json();
 
-		let addr2 = 'http://192.168.0.97:8080/startrek/sttv/02';
+		let addr2 = 'http://192.168.0.99:8080/startrek/sttv/02';
 		const res2 = await fetch(addr2);
 		data2 = await res2.json();
 
-		let addr3 = 'http://192.168.0.97:8080/startrek/sttv/03';
+		let addr3 = 'http://192.168.0.99:8080/startrek/sttv/03';
 		const res3 = await fetch(addr3);
 		data3 = await res3.json();
 	});

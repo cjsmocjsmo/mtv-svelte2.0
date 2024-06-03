@@ -9,7 +9,7 @@ export const csr = dev;
 export const prerender = true;
 // export async function load({ fetch }) {
 
-//     let addr = 'http://192.168.0.97:8080/hford1923/01'
+//     let addr = 'http://192.168.0.99:8080/hford1923/01'
 //     const res = await fetch(addr);
 //     const ford = await res.json();
 

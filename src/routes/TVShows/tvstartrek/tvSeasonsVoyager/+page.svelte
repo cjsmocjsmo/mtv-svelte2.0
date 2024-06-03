@@ -13,31 +13,31 @@
 	let data7 = [];
 
 	onMount(async () => {
-		let addr = 'http://192.168.0.97:8080/startrek/voyager/01';
+		let addr = 'http://192.168.0.99:8080/startrek/voyager/01';
 		const res = await fetch(addr);
 		data1 = await res.json();
 
-		let addr2 = 'http://192.168.0.97:8080/startrek/voyager/02';
+		let addr2 = 'http://192.168.0.99:8080/startrek/voyager/02';
 		const res2 = await fetch(addr2);
 		data2 = await res2.json();
 
-		let addr3 = 'http://192.168.0.97:8080/startrek/voyager/03';
+		let addr3 = 'http://192.168.0.99:8080/startrek/voyager/03';
 		const res3 = await fetch(addr3);
 		data3 = await res3.json();
 
-		let addr4 = 'http://192.168.0.97:8080/startrek/voyager/04';
+		let addr4 = 'http://192.168.0.99:8080/startrek/voyager/04';
 		const res4 = await fetch(addr4);
 		data4 = await res4.json();
 
-		let addr5 = 'http://192.168.0.97:8080/startrek/voyager/05';
+		let addr5 = 'http://192.168.0.99:8080/startrek/voyager/05';
 		const res5 = await fetch(addr5);
 		data5 = await res5.json();
 
-		let addr6 = 'http://192.168.0.97:8080/startrek/voyager/06';
+		let addr6 = 'http://192.168.0.99:8080/startrek/voyager/06';
 		const res6 = await fetch(addr6);
 		data6 = await res6.json();
 
-		let addr7 = 'http://192.168.0.97:8080/startrek/voyager/07';
+		let addr7 = 'http://192.168.0.99:8080/startrek/voyager/07';
 		const res7 = await fetch(addr7);
 		data7 = await res7.json();
 	});

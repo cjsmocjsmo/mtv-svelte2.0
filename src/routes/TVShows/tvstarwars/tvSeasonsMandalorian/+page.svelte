@@ -9,15 +9,15 @@
 	let data3 = [];
 
 	onMount(async () => {
-		let addr1 = 'http://192.168.0.97:8080/starwars/mandalorian/01';
+		let addr1 = 'http://192.168.0.99:8080/starwars/mandalorian/01';
 		const res1 = await fetch(addr1);
 		data = await res1.json();
 
-		let addr2 = 'http://192.168.0.97:8080/starwars/mandalorian/02';
+		let addr2 = 'http://192.168.0.99:8080/starwars/mandalorian/02';
 		const res2 = await fetch(addr2);
 		data2 = await res2.json();
 
-		let addr3 = 'http://192.168.0.97:8080/starwars/mandalorian/03';
+		let addr3 = 'http://192.168.0.99:8080/starwars/mandalorian/03';
 		const res3 = await fetch(addr3);
 		data3 = await res3.json();
 	});
