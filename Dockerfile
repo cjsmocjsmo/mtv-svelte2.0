@@ -7,7 +7,8 @@ RUN \
     mkdir /usr/share/nginx/html/_app/immutable/chunks && \
     mkdir /usr/share/nginx/html/_app/immutable/entry && \
     mkdir /usr/share/nginx/html/_app/immutable/nodes && \
-    mkdir /usr/share/nginx/html/Movies
+    mkdir /usr/share/nginx/html/Movies && \
+    mkdir /usr/share/nginx/html/TVShows
 
 COPY build/*.html /usr/share/nginx/html/
 COPY build/*.png /usr/share/nginx/html/
@@ -22,5 +23,6 @@ COPY build/_app/immutable/chunks/*.js /usr/share/nginx/html/_app/immutable/chunk
 COPY build/_app/immutable/entry/*.js /usr/share/nginx/html/_app/immutable/entry/
 COPY build/_app/immutable/nodes/*.js /usr/share/nginx/html/_app/immutable/nodes/
 COPY build/Movies/*.html /usr/share/nginx/html/Movies/
+COPY build/TVShows/*.html /usr/share/nginx/html/TVShows/
 
 EXPOSE 8090
