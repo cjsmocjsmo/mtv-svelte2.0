@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import BackArrow from '$lib/components/BackArrow.svelte';
-	import PlayerControls from '$lib/components/PlayerControls.svelte';
+	
 	import SeasonButton from '$lib/components/TVSeasonPlayButton.svelte';
 
 	let data1 = [];
@@ -80,7 +80,7 @@
 		</div>
 	</div>
 	
-	<PlayerControls />
+	
 </main>
 
 <style>

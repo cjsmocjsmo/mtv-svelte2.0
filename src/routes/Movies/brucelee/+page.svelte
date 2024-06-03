@@ -2,7 +2,6 @@
 	import { onMount } from 'svelte';
 	import BackArrow from '$lib/components/BackArrow.svelte';
 	import MovList from '$lib/components/MovList.svelte';
-	import PlayerControls from '$lib/components/PlayerControls.svelte';
 	
 	let data = [];
 	onMount(async () => {
@@ -17,9 +16,9 @@
 <main>
 	<BackArrow path="/" />
 	<h1>Bruce Lee</h1>
-	<PlayerControls />
+	
 	<MovList {data} />
-	<PlayerControls />
+	
 </main>
 
 <style>

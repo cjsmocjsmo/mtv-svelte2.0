@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import BackArrow from '$lib/components/BackArrow.svelte';
 	import SeasonButton from '$lib/components/TVSeasonPlayButton.svelte';
-	import PlayerControls from '$lib/components/PlayerControls.svelte';
+	
 	
 	let s1 = [];
 
@@ -27,7 +27,7 @@
 			{/each}
 		</div>
 	</div>
-	<PlayerControls />
+	
 </main>
 
 <style>

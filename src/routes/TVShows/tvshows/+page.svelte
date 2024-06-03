@@ -1,5 +1,5 @@
 <script>
-	import PlayerControls from '$lib/components/PlayerControls.svelte';
+	
 </script>
 
 <svelte:head>
@@ -46,7 +46,7 @@
 		<a href="/TVShows/tvmcu"><p class="mov">MCU</p></a>
 		<a href="/TVShows/tvwesterns"><p class="mov">Western</p></a>
 	</div>
-	<PlayerControls />
+	
 </main>
 
 <style>

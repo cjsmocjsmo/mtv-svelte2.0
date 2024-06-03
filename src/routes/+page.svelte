@@ -1,5 +1,4 @@
 <script>
-	import PlayerControls from '$lib/components/PlayerControls.svelte';
 	import MainMovList from '$lib/components/MainMovList.svelte';
 </script>
 
@@ -44,10 +43,10 @@
 		</div>
 	</div>
 	<div>
-		<PlayerControls />
+		<!--  -->
 		<MainMovList />
 	</div>
-	<PlayerControls />
+	<!--  -->
 </main>
 
 <style>

@@ -75,8 +75,8 @@
 		margin: 1em;
 	}
 	svg {
-		width: 2em;
-		height: 2em;
+		width: 1.5em;
+		height: 1.5em;
 		fill: black;
 		padding: 1em;
 		border-radius: 50%;
