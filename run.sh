@@ -2,7 +2,7 @@
 
 # Check if there are at least two arguments provided
 if [ "$#" -ne 1 ]; then
-    echo "You must enter exactly 2 arguments:\n\tarchitecture (32 or 64) and version (e.g., 0.0.1)";
+    echo "You must enter exactly 1 arguments:\n\t version (e.g., 0.0.1)";
     exit 1;
 fi
 
@@ -12,6 +12,9 @@ if ! echo "$1" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$'; then
     echo "The second argument must be a valid version string (e.g., 0.0.1)";
     exit 1;
 fi
+
+echo "$1";
+echo "$2";
 
 git pull https://github.com/cjsmocjsmo/mtv-svelte2.0.git;
 
