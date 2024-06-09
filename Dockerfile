@@ -25,4 +25,4 @@ COPY build/_app/immutable/nodes/*.js /usr/share/nginx/html/_app/immutable/nodes/
 COPY build/Movies/*.html /usr/share/nginx/html/Movies/
 COPY build/TVShows/*.html /usr/share/nginx/html/TVShows/
 
-EXPOSE 8090
+# EXPOSE 8090
