@@ -35,12 +35,12 @@ git pull https://github.com/cjsmocjsmo/mtv-svelte2.0.git;
 
 # If all checks pass, print the arguments
 
-count1=$(echo "$1" | sed 's/\.//g' )
+count1=$(echo "$2" | sed 's/\.//g' )
 count=$((count1+1-1))
 minusone=$((count-1))
 
-echo "Version: $1";
-echo "mtvsvelte:$1";
+echo "Version: $2";
+echo "mtvsvelte:$2";
 echo "mtvsvelte$count";
 echo "mtvsvelte$minusone";
 
@@ -50,9 +50,9 @@ if [ "$minusone" -eq 0 ]; then
 
     npm run build;
 
-    docker build -t mtvsvelte:$1 .;
+    docker build -t mtvsvelte:$2 .;
     
-    docker run --name mtvsvelte1 -d -p 8090:80 mtvsvelte:$1;
+    docker run --name mtvsvelte1 -d -p 8090:80 mtvsvelte:$2;
 
     exit 0;
 fi
@@ -68,9 +68,9 @@ if [ "$minusone" -eq 1 ]; then
 
     npm run build;
 
-    docker build -t mtvsvelte:$1 .;
+    docker build -t mtvsvelte:$2 .;
 
-    docker run --name mtvsvelte$count -d -p 8090:80 mtvsvelte:$1;
+    docker run --name mtvsvelte$count -d -p 8090:80 mtvsvelte:$2;
 
     exit 0;
 fi
@@ -87,9 +87,9 @@ if [ "$minusone" -gt 1 ]; then
 
     npm run build;
 
-    docker build -t mtvsvelte:$1 .;
+    docker build -t mtvsvelte:$2 .;
 
-    docker run --name mtvsvelte$count -d -p 8090:80 mtvsvelte:$1;
+    docker run --name mtvsvelte$count -d -p 8090:80 mtvsvelte:$2;
 
     exit 0;
 fi
