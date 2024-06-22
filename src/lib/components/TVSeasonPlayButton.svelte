@@ -2,7 +2,7 @@
 	export const prerender = false;
 	export let info;
 	let playmovie = () => {
-		const ad = 'http://192.168.0.99:8181/OmxplayerPlayMediaReact?medPath=';
+		const ad = 'http://192.168.0.99:8080/play/';
 		let ad2 = ad + info.path;
 		let resp = fetch(ad2);
 	}
@@ -27,15 +27,4 @@
 		font-size: 20px;
 		margin: 4px 2px;
 	}
-	/* .s3 {
-        display:flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-    p {
-        margin: 1em;
-        font-size: 20px;
-    } */
 </style>
