@@ -5,7 +5,7 @@
 	export let alt;
 
 	let playmovie = () => {
-		const ad = 'http://192.168.0.99:8080/start/';
+		const ad = 'http://192.168.0.99:8080/startmov/';
 		let ad2 = ad + movid;
 		let resp = fetch(ad2);
 	};
