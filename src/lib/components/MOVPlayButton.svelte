@@ -1,12 +1,12 @@
 <script>
 	export const prerender = false;
-	export let path;
+	export let movid;
 	export let src;
 	export let alt;
 
 	let playmovie = () => {
-		const ad = 'http://192.168.0.99:8080/play/';
-		let ad2 = ad + path;
+		const ad = 'http://192.168.0.99:8080/start/';
+		let ad2 = ad + movid;
 		let resp = fetch(ad2);
 	};
 </script>

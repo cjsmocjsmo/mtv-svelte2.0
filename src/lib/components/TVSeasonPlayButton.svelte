@@ -2,7 +2,7 @@
 	export const prerender = false;
 	export let info;
 	let playmovie = () => {
-		const ad = 'http://192.168.0.99:8080/play/';
+		const ad = 'http://192.168.0.99:8080/start/';
 		let ad2 = ad + info.path;
 		let resp = fetch(ad2);
 	}
