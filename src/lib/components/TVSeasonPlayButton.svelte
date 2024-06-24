@@ -5,10 +5,14 @@
 		const ad = 'http://192.168.0.99:8080/starttv/';
 		let ad2 = ad + info.path;
 		let resp = fetch(ad2);
+		console.log(ad2);
 	}
 </script>
 
 <div>
+	{info.tvid}
+	{info.episode}
+
 	<button on:click={playmovie}>{info.episode}</button>
 </div>
 

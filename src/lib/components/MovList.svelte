@@ -6,7 +6,6 @@
 <div class="movlist">
 	{#each data as mov}
 		<div class="movlist">
-			{mov.movid}
 			<MovPlayButton movid={mov.movid} src={mov.httpthumbpath} alt={mov.name} />
 		</div>
 	{/each}
